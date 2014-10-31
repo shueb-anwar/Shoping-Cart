@@ -1,0 +1,567 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+img {
+    vertical-align: middle;
+}
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+body{ background:#eef3cc; }
+	*{	font-family:Georgia, "Times New Roman", Times, serif; color:#333; }
+	h1{ font-size:24px; }
+	p { font-size:18px; display:inline-block;}
+	p#time{ text-decoration: underline; color : red}
+	.header{ background:#333;	padding:10px  20px; }
+	.header h1{ color:#FFF; margin:0; line-height:40px;}
+	.footer{ position:fixed; bottom: 0; left : 0; right : 0; min-height: 40px; background:#333; line-height: 40px; padding: 0px 20px; color: #FFF}
+	.right{ float:right; color:#FFF;}
+.header .navigation{
+	margin : 0;
+	padding : 0;
+	float : right;
+	margin: 9px 0 0 0;
+}
+.header .navigation li{
+	display : inline-block;
+}
+.header .navigation li a{
+	display : block;
+	padding : 5px 20px;
+	border : none;
+	font-weight : bold;
+	font-size: 12px;
+	color : #FFF;
+	text-decoration : none;
+	padding-left : 40px;
+	position : relative;
+}
+.header .navigation li a.favorite{
+	background-position: 0px -266px;
+}
+.header .navigation li a.home{
+	background-position: 0px -311px;
+}
+.header .navigation li a.cart{
+	background-position: 0px -160px;
+}
+.header .navigation .cart span,.header .navigation .favorite span{
+	position : absolute; 
+	top : -7px;
+	right : -5px;
+	background : #F00;
+	color : #FFF;
+	padding: 2px 8px;
+	border-radius: 10px;
+}
+.header .navigation li a,
+.header .cart a,
+.add-to-cart .input,
+.save-for-later .input,
+.tclose{
+	background-image : url(../img/sprite.png);
+	background-repeat : no-repeat;
+}
+.container{
+	width:950px;
+	margin:0 auto;
+}
+.header{
+	/*background:url(../img/background.png) no-repeat;	*/
+	position : relative;
+}
+.header .cart a{
+	color : #FFF;
+	display : block;
+	background-position : -10px -5px;
+	padding : 5px 0px 5px 30px;
+	text-decoration : none;
+	font-size: 14px;
+	font-weight : bold;
+	position : relative;
+}
+.header .cart a span{
+	position : absolute; 
+	top : -7px;
+	right : -20px;
+	background : #F00;
+	color : #FFF;
+	padding: 2px 8px;
+	border-radius: 10px;
+}
+#items{
+	margin : 0 auto 60px auto;
+}
+.item-wrapper{
+	border-bottom : 1px solid #74B882;
+}
+.item{
+	overflow : auto;
+	width : 237px;
+	display : inline-block;
+	position : relative;
+	display : table-cell;
+	vertical-align : top;
+}
+.item .inner{
+	padding: 10px;
+	border-radius: 10px;
+	margin: 10px 0px;
+}
+.productImage{
+	border : 1px solid #74B882;
+	position : relative;
+}
+.productImage:hover > .more-detail{
+	display : block;
+}
+.productImage img{
+	width : 217px;
+}
+.add-to-cart,.save-for-later{
+	display : inline-block;
+}
+.add-to-cart .input,.save-for-later .input{
+	padding : 7px 35px 7px 10px;
+	font-size : 12px;
+	font-weight : bold;
+	background-position: right -160px;
+	border : 1px solid #74B882;
+}
+.save-for-later .input{
+	margin-top : 10px;
+	background-position: right -67px;
+	border-left : 0;
+}
+.product-price{
+	font-size : 12px;
+	color : #FF0000;
+}
+.more-detail{
+	font-size: 11px;
+	position : absolute;
+	top : 50%;
+	left : 50%;
+	margin : -12px 0 0 -53px;
+	background : #74B882;
+	color : #eef3cc;
+	display : inline-block;
+	padding: 5px 20px;
+	display : none;
+}
+.model-wrapper{
+	position : fixed;
+	top : 0;
+	right : 0;
+	 bottom : 0;
+	left : 0;
+	background : rgba(0,0,0,0.5);
+	z-index : 10
+}
+.model{
+	width : 700px;
+	height : 600px;
+	background : #FFF;
+}
+.inner{
+	padding : 20px;
+}
+.model .detail{
+	width : 250px;
+	padding : 100px 25px 0 25px;
+	text-align : center;
+	display : inline-block;
+	float : left;
+}
+.model .product-name{
+	padding : 50px 0 0 0;
+	border-top : 5px solid #e3e3e3;
+}
+.model .price{
+	font-size : 70px;
+	color : #666;
+}
+.model .price span{
+	font-size : 15px;
+}
+.color ul {padding-left : 0; }
+.color li{
+	display : inline-block;
+	margin : 0 2px;
+	line-height: 20px;
+	color: #FFF;
+	border : 2px solid #666;
+
+}
+.color li a{
+	display : block;
+	height : 20px;
+	width : 20px;
+}
+.color li a{
+	border : 2px solid #666;
+}	
+.color li a.active{
+	border : 2px solid #F00;
+}	
+.model .add-to-cart{
+	padding : 20px 0 0 0;
+}
+.model .close{
+	position : absolute;
+	top : 10px;
+	right : 10px;
+	width: 40px;
+	height: 40px;
+	background-position: 0px -211px;
+}
+.color-size table{
+	width : 100%;
+}
+.color-size select{
+	width: 80px;
+	padding: 5px 2px;
+	border: 1px solid #e3e3e3;
+}
+.myButton {
+	-moz-box-shadow:inset 0px 39px 0px -24px #e67a73;
+	-webkit-box-shadow:inset 0px 39px 0px -24px #e67a73;
+	box-shadow:inset 0px 39px 0px -24px #e67a73;
+	background-color:#e4685d;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	border:1px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	padding:6px 15px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35;
+}
+.myButton.big{
+	font-size : 22px;
+	padding : 12px 30px;
+}	
+.myButton.big.starred{
+	background-image: url(../img/sprite.png);
+	background-repeat: no-repeat;
+	background-position: 11px -99px;
+}
+.myButton:hover {
+	background-color:#eb675e;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+.main-thumb{
+	text-align: center;
+	padding : 5px 0 0 0;
+	margin-left : 276px;
+}
+.main-thumb div.thumb-big{ display : none; }
+.main-thumb  div.thumb-big.active{ display : block; }
+.main-thumb > img{ width : 360px; }
+.main-thumb .thumb-big img{
+	max-width : 360px;
+}
+.small-thumbs li{
+	display : inline-block;
+	width : 50px;
+	border : 1px solid #e3e3e3;
+	margin : 0 2px;
+}
+.small-thumbs li img{
+	width : 50px;
+}
+.cart-container{ width : 600px; height: 400px;
+overflow: auto;}
+.cart-container .cart-item {
+	padding: 10px 0;
+	overflow: auto;
+	border-bottom: 1px solid #e3e3e3;
+}
+.cart-container .cart-item .img {
+	float: left;
+	margin: 0 20px 0 0;
+}
+
+.total table {
+	float: right;
+}
+.total th, .total td {
+	line-height: 40px;
+	border-bottom: 1px solid #e3e3e3;
+	text-align: left;
+}
+
+.total a{ font-size : 11px; }
+.tbox {position:absolute; display:none; padding:14px 17px; z-index:900}
+.tinner {padding:15px; -moz-border-radius:5px; border-radius:5px; background:#fff url(../img/preload.gif) no-repeat 50% 50%; border-right:1px solid #333; border-bottom:1px solid #333}
+.tmask {position:absolute; display:none; top:0px; left:0px; height:100%; width:100%; background:#000; z-index:800}
+.tclose {position:absolute; top:0px; right:0px; width:30px; height:30px; cursor:pointer; background: url(../img/close.png)}
+.tclose:hover{ background-position  : 0 -30px }
+#error {background:#ff6969; color:#fff; text-shadow:1px 1px #cf5454; border-right:1px solid #000; border-bottom:1px solid #000; padding:0}
+#error .tcontent {padding:10px 14px 11px; border:1px solid #ffb8b8; -moz-border-radius:5px; border-radius:5px}
+#success {background:#2ea125; color:#fff; text-shadow:1px 1px #1b6116; border-right:1px solid #000; border-bottom:1px solid #000; padding:10; -moz-border-radius:0; border-radius:0}
+#bluemask {background:#4195aa}
+#frameless {padding:0}
+#frameless .tclose {left:6px}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
